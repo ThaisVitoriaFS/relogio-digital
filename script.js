@@ -3,22 +3,20 @@ const minutesElement = document.getElementById('minutes')
 const secondsElement = document.getElementById('seconds')
 
 function newTime(){
-    const date = new Date();
+    const date = new Date()
+    const hours = date.getHours()
+    const minutes = date.getMinutes()
+    const seconds = date.getSeconds()
 
-     const hours = date.getHours()
-     const minutes = date.getMinutes()
-     const seconds = date.getSeconds()
-
-     hoursElement.textContent = fixtime(hours)
-     minutesElement.textContent = fixtime(minutes)
-     secondsElement.textContent = fixtime(seconds)
-
+    hoursElement.textContent = fixTime(hours)
+    minutesElement.textContent = fixTime(minutes)
+    secondsElement.textContent = fixTime(seconds)
 }
 
 
-function fixtime(time){
+function fixTime(time){
     return time < 10 ? '0'+time : time
 }
 
-NewTime()
+newTime()
 setInterval(newTime, 1000)

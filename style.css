@@ -5,7 +5,7 @@
     --color-dark: #003c5f;
     --color-white: #f6ced8;
     --color-light:#97c6d3;
-    --color-orange: #77b2e8;
+    --color-blue: #77b2e8;
 }
 
 *{
@@ -47,5 +47,5 @@ body{
 }
 
 h2 strong{
-    color: var(--color-orange);
+    color: var(--color-blue);
 }
